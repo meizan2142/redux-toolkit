@@ -8,7 +8,7 @@ const AddTodo = () => {
 
     const addTodoHandler = (e) => {
         e.preventDefault()
-        if (input.trim()) {  // Check for empty input
+        if (input.trim()) {
             dispatch(addTodo(input))
             setInput('')
         }
@@ -18,7 +18,6 @@ const AddTodo = () => {
         <div className="p-4">
             <form onSubmit={addTodoHandler} className="flex gap-2">
                 <input
-                    type="text"
                     placeholder='Enter todo'
                     className='border p-2 flex-1 rounded'
                     value={input}
