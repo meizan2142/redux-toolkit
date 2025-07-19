@@ -1,19 +1,12 @@
 import './App.css'
+import AddTodo from './components/AddTodo'
+import Todos from './components/Todos'
 
 function App() {
-
-    // const str = "Sabrina"  
-    // const splittedString = str.split("").reverse().join("")
-    // console.log(splittedString);
-
-  // let arr = [,,,]
-  // console.log(arr.length);
-  
-
-
   return (
     <div>
-      <h1 className='text-3xl font-bold underline'>Redux-Toolkit</h1>
+      <AddTodo />
+      <Todos/>
     </div>
   )
 }
