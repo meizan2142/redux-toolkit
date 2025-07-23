@@ -23,7 +23,7 @@ const Todos = () => {
                             <td className="py-4 px-6 border-b">
                                 {todo.date || "N/A"}
                             </td>
-                            <td className="py-4 px-6 border-b">{todo.text}</td>
+                            <td className="py-4 px-6 border-b">{todo.title || todo.text}</td>
                             <td className="py-4 px-6 border-b text-center">
                                 <button
                                     onClick={() => dispatch(removeTodo(todo.id))}

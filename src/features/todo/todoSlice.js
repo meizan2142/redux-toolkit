@@ -1,8 +1,17 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit"
 
 const initialState = {
-    todos: []
+    todos: [{ text: "Python", id: 1}]
 }
+
+const date = new Date().toLocaleString('en-US', {
+    month: 'numeric',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true
+}).replace(',', '');
 
 export const todoSlice = createSlice({
     name: 'todo',
@@ -10,8 +19,10 @@ export const todoSlice = createSlice({
     reducers: {
         addTodo: (state, action) => {
             const todo = {
-                id: nanoid(), 
-                payload: action.payload
+                id: nanoid(),
+                payload: action.payload,
+                text: action.payload,
+                date: date
             }
             state.todos.push(todo)
         },
@@ -21,6 +32,6 @@ export const todoSlice = createSlice({
     }
 })
 
-export const {addTodo, removeTodo} = todoSlice.actions
+export const { addTodo, removeTodo } = todoSlice.actions
 
 export default todoSlice.reducer
