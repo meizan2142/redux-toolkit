@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit"
 
 const initialState = {
-    todos: [{ text: "Python", id: 1}]
+    todos: [{ text: "Python", id: nanoid(), date: "7/20/2025 10:33 AM"}]
 }
 
 const date = new Date().toLocaleString('en-US', {
